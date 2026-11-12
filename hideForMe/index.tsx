@@ -14,10 +14,11 @@ import { addChatBarButton, ChatBarButton, ChatBarButtonFactory, removeChatBarBut
 import { NavContextMenuPatchCallback } from "@api/ContextMenu";
 import { get, set } from "@api/DataStore";
 import { addMessagePopoverButton, removeMessagePopoverButton } from "@api/MessagePopover";
+import { Button } from "@components/Button";
 import { DeleteIcon } from "@components/Icons";
 import definePlugin, { IconComponent } from "@utils/types";
 import { Message } from "@vencord/discord-types";
-import { Button, ChannelStore, closeModal, FluxDispatcher, GuildMemberStore, Menu, MessageStore, Modal, openModal, React, SelectedChannelStore, showToast, useEffect, UserStore, useState } from "@webpack/common";
+import { ChannelStore, closeModal, FluxDispatcher, GuildMemberStore, Menu, MessageStore, Modal, openModal, React, SelectedChannelStore, showToast, useEffect, UserStore, useState } from "@webpack/common";
 
 const STORE_KEY = "HideForMe_v1";
 const CLEARED_KEY = "HideForMe_cleared_v1";

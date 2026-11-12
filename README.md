@@ -20,7 +20,7 @@ git clone https://github.com/Vendicated/Vencord
 cd Vencord
 pnpm install --frozen-lockfile
 mkdir -p src/userplugins
-cp -r /path/to/hideforme-vencord/hideForMe src/userplugins/   # or `unzip hideForMe-1.0.0.zip "hideForMe/*" -d src/userplugins/`
+cp -r /path/to/hideforme-vencord/hideForMe src/userplugins/   # or `unzip hideForMe-1.0.1.zip "hideForMe/*" -d src/userplugins/`
 pnpm build
 pnpm inject            # desktop Discord; for Vesktop point "Vencord location" to this repo's dist/
 ```
@@ -29,7 +29,7 @@ Then enable **HideForMe** in Settings → Vencord → Plugins and restart/reload
 Requires Node ≥ 22 and pnpm 11.
 
 ## Notes
-- Tested only against Vencord 1.15.13: type-check (`pnpm testTsc`), `eslint` and `pnpm build` pass. It relies on Discord's DOM (`li[id^="chat-messages-"]`) and on `LOAD_MESSAGES_SUCCESS`, so Discord updates can break the visual part.
+- Tested against Vencord 1.15.17 (for 1.15.13 use release v1.0.0): type-check (`pnpm testTsc`), `eslint` and `pnpm build` pass. It relies on Discord's DOM (`li[id^="chat-messages-"]`) and on `LOAD_MESSAGES_SUCCESS`, so Discord updates can break the visual part.
 - Hidden state lives in your Vencord data: it is not synced between devices.
 
 ## License
